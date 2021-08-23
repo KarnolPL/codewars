@@ -1,0 +1,9 @@
+def cakes(recipe, available):
+    m = 999999999999999
+    for i in recipe:
+        if i not in available:
+            return 0
+        else:
+            if m > available[i]//recipe[i]:
+                m = available[i]//recipe[i]
+    return m
